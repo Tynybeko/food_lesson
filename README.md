@@ -5,5 +5,6 @@
 
 ```js
 git clone https://github.com/Tynybeko/food_lesson.git
+npm install
 ```
 
