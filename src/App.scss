@@ -1,0 +1,5 @@
+.image-contant {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}

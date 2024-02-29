@@ -7,6 +7,8 @@ export default function Auth() {
     const rout = useNavigate()
 
     useEffect(() => {
+        let token = localStorage.getItem('jwt')
+        if (!token) return
         const response = API.get('/auth/user/profile/')
         response.then(({ data }) => {
             if (data) {
