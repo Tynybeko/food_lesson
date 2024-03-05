@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import API from '../../axios'
 import Loading from '../../components/UI/Loading'
 import Button from '../../components/UI/Button'
@@ -20,7 +20,6 @@ export default function SiingleFood() {
         const response = API.get(`/foods/${params.foodId}`)
         response
             .then(res => {
-                console.log(res);
                 setFood(prev => ({ ...prev, data: res.data }))
             })
             .catch(err => {

@@ -18,7 +18,6 @@ export default function Home() {
         const response = API.get('/foods/')
         response
             .then(res => {
-                console.log(res);
                 setFood(prev => ({ ...prev, data: res.data }))
             })
             .catch(err => {

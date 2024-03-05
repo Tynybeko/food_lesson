@@ -8,6 +8,9 @@ import Register from './pages/Register'
 import AuthLayout from './layout/AuthLayout'
 import AdminLayout from './layout/AdminLayout'
 import SiingleFood from './pages/home/SiingleFood'
+import Admin from './pages/admin/Admin'
+import Create from './pages/admin/Create'
+import Update from './pages/admin/Update'
 
 function App() {
 
@@ -22,9 +25,9 @@ function App() {
         <Route path='register' element={<Register />} />
       </Route>
       <Route path='/admin' element={<AdminLayout />}>
-          {/* 1) Read Admin.jsx */}
-          {/* 2) Update Update.jsx */}
-          {/* 3) Create Create.jsx */}
+        <Route index element={<Admin/>}/>
+        <Route path='create' element={<Create/>}/>
+        <Route path='update/:foodId' element={<Update/>}/>
       </Route>
 
     </Routes>
