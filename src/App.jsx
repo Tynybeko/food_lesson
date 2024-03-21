@@ -11,6 +11,8 @@ import SiingleFood from './pages/home/SiingleFood'
 import Admin from './pages/admin/Admin'
 import Create from './pages/admin/Create'
 import Update from './pages/admin/Update'
+import Basket from './pages/basket/Basket'
+import Histrory from './pages/history/Histrory'
 
 function App() {
 
@@ -19,15 +21,17 @@ function App() {
       <Route path='/' element={<HomeLayout />}>
         <Route index element={<Home />} />
         <Route path='food/:foodId' element={<SiingleFood />} />
+        <Route path='basket' element={<Basket />} />
+        <Route path='history' element={<Histrory />} />
       </Route>
       <Route path='/auth' element={<AuthLayout />}>
         <Route index element={<Auth />} />
         <Route path='register' element={<Register />} />
       </Route>
       <Route path='/admin' element={<AdminLayout />}>
-        <Route index element={<Admin/>}/>
-        <Route path='create' element={<Create/>}/>
-        <Route path='update/:foodId' element={<Update/>}/>
+        <Route index element={<Admin />} />
+        <Route path='create' element={<Create />} />
+        <Route path='update/:foodId' element={<Update />} />
       </Route>
 
     </Routes>
